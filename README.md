@@ -10,7 +10,7 @@ Please use the following command to view the version number of CentOS Linux:
 
 [root@host ~]# cat /etc/redhat-release
 CentOS release 6.9 (Final)
-2, then use yum to install wget (if you have installed, you can ignore this step):
+2. then use yum to install wget (if you have installed, you can ignore this step):
 
 [root@host ~]# yum -y install wget
 3. Ricky personally likes to put some temporary files in the /tmp directory, so enter the /tmp directory, use the wget command to download the installation script here, and execute the script:
