@@ -19,7 +19,7 @@ echo "|                 Welcome to  http://github.com/52fancy                  |
 echo "+------------------------------------------------------------------------+"
 
 if [ ! -f "/boot/grub/grub.conf" ];then
-	echo "不支持当前系统，即将退出程序！"
+	echo "Does not support the current system, will quit the program!"
 	exit
 fi
 
@@ -43,10 +43,10 @@ fi
 Install()
 {
     if lsmod | grep -Eqi "bbr"; then
-	    echo "您已经成功安装BBR"
+	    echo "You have successfully installed BBR"
 		exit
 	else
-	    read -p "即将升级内核？[Y]：" is_update
+	    read -p "Will the kernel be upgraded soon?[Y]：" is_update
 		if [[ ${is_update} == "y" || ${is_update} == "Y" ]]; then
 		    rpm --import https://www.elrepo.org/RPM-GPG-KEY-elrepo.org
             rpm -Uvh http://www.elrepo.org/elrepo-release-6-8.el6.elrepo.noarch.rpm
@@ -61,14 +61,14 @@ Install()
 			
 			sysctl -p >/dev/null 2>&1
 			
-			read -p "重启后生效，是否重启？[Y]：" is_reboot
+			read -p "Effective after restart, restart?[Y]：" is_reboot
 			if [[ ${is_reboot} == "y" || ${is_reboot} == "Y" ]]; then
 			    reboot
 			else
 			    exit
 			fi
 		else
-		    echo "程序即将退出安装"
+		    echo "The program is about to exit the installation"
             exit
 		fi
     fi
