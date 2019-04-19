@@ -9,7 +9,7 @@
 
 ## Please use the following command to view the version number of CentOS Linux:
 ```cat /etc/redhat-release```
-* CentOS release 6.9 (Final)
+### CentOS release 6.9 (Final)
 
 ## then use yum to install wget (if you have installed, you can ignore this step):
 ```yum -y install wget```
